@@ -1,0 +1,80 @@
+.tree {
+    display: grid;
+    align-content: center;
+    grid-template-columns: 9em 9em 9em 9em 9em 9em 9em 9em 9em;
+}
+
+.title {
+    border: 3px solid black;
+    border-radius: .5em;
+    text-align: center;
+}
+
+.slotcontainer {
+    display: grid;
+    align-content: center;
+    grid-template-columns: 7em 2em;
+}
+
+.cards {
+    display: grid;
+}
+
+.card {
+    border: 3px solid black;
+    border-radius: .5em;
+
+    margin: 0.5em 0.25em;
+    width: 5em;
+    height: 10em;
+}
+
+#skillbar {
+    background-color: grey;
+
+    /* height: auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0; */
+}
+
+#skills {
+    display: flex;
+    /* flex-direction: row; */
+    /* overflow-x: auto;
+    overflow-y: hidden; */
+}
+
+.skill {
+    background-color: antiquewhite;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    img {
+        /* Skill art */
+        object-fit: scale-down;
+    }
+
+    p {
+        /* Skill name */
+        text-align: center;
+        margin: 0em;
+    }
+}
+
+.arts {
+    /* Great Arts block */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    margin: .25em 0em;
+
+    img {
+        /* Great Arts symbols*/
+        display: inline-flex;
+        width: 1.5em;
+    }
+}
