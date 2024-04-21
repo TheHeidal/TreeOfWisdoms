@@ -4,7 +4,9 @@ class Skill {
         this.id = jsonSkill.id;
         this.label = jsonSkill.Label;
         this.desc = jsonSkill.Desc;
-        this.aspects = jsonSkill.aspects;
+        this.aspects = jsonSkill.aspects; //Objec
+        console.log(Object.keys(this.aspects));
+        this.arts = Object.keys(this.aspects).filter(aspect => aspect.startsWith('w.'))
     }
 }
 
@@ -18,7 +20,8 @@ const SKILLS_FULL = fetch(SKILLS_URL)
         for (var jsonSkill of jsonData.elements) {
             console.log(jsonSkill);
             skills[jsonSkill.id] = new Skill(jsonSkill);
+            console.log(skills[jsonSkill.id]);
         }
-        console.log(skills);
+        // console.log(skills);
     })
     .catch(err => console.error('Error fetching JSON:', err));
