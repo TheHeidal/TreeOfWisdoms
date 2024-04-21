@@ -32,17 +32,17 @@
 #skillbar {
     background-color: grey;
 
-    /* height: auto;
+    height: auto;
     width: 100%;
     position: fixed;
-    bottom: 0; */
+    bottom: 0;
 }
 
 #skills {
     display: flex;
-    /* flex-direction: row; */
-    /* overflow-x: auto;
-    overflow-y: hidden; */
+    flex-direction: row;
+    overflow-x:scroll;
+    overflow-y: hidden;
 }
 
 .skill {
@@ -54,13 +54,14 @@
 
     img {
         /* Skill art */
-        object-fit: scale-down;
+        width: 5em;
     }
 
     p {
         /* Skill name */
         text-align: center;
         margin: 0em;
+
     }
 }
 
