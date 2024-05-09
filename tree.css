@@ -42,7 +42,7 @@
     display: flex;
     flex-direction: row;
     overflow-x:scroll;
-    overflow-y: hidden;
+    margin-inline: .5em;
 }
 
 .skill {

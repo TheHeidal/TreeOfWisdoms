@@ -1,4 +1,4 @@
-const imgURLPrefix = 'https://uadaf.theevilroot.xyz/rowenarium/static/bhimages';
+// const imgURLPrefix = 'https://uadaf.theevilroot.xyz/rowenarium/static/bhimages';
 
 class Skill {
     //constructor
@@ -11,7 +11,6 @@ class Skill {
     }
 
     makeCard() {
-        console.log('making %s', this.id)
         // Card Div
         const card = document.createElement("div");
         card.className = "skill card";
@@ -28,16 +27,21 @@ class Skill {
         console.assert((this.arts.length === 2), 'wrong number of arts!', this);
         function makeArtsImg(aspectStr) {
             const art = document.createElement("img");
-            art.attributes['src'] = `${imgURLPrefix}/aspects/${aspectStr}.png`;
-            art.attributes['alt'] = aspectStr.slice(2); //chop off 'w.'
+            art.setAttribute('src', `/aspects/${aspectStr}.png`);
+            // art.setAttribute('src', `${imgURLPrefix}/aspects/${aspectStr}.png`);
+            art.setAttribute('alt', aspectStr.slice(2)); //chop off 'w.'
             return art;
         };
         const art0 = makeArtsImg(this.arts[0]);
         const art1 = makeArtsImg(this.arts[1]);
         arts.append(art0, art1);
-        //
+        // Skill Img
         const skillImg = document.createElement("img");
-        skillImg.attributes["src"] = `${imgURLPrefix}/elements/${this.id}.png`;
+        skillImg.setAttribute("src", `$elements/${this.id}.png`);
+        // skillImg.setAttribute("src", `${imgURLPrefix}/elements/${this.id}.png`);
+        // Skill Name
+        const name = document.createElement("p");
+        name.
     }
 
 }
